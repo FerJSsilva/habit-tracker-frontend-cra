@@ -13,6 +13,10 @@
   }
 }
 
+html, body, pre, code, kbd, samp {
+  font-family: 'Press Start 2P', cursive;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
