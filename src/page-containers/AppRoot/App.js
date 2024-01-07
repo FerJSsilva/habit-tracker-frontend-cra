@@ -161,6 +161,7 @@ function App() {
           bottom: 0,
           width: '92.5%',
           backgroundColor: 'white',
+          maxWidth: '475px',
         }}
       >
         <div class="nes-container is-rounded">
