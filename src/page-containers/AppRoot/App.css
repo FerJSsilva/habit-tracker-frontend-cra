@@ -13,7 +13,8 @@ code {
 }
 
 .App {
-  text-align: center;
+  text-align: left;
+  padding-bottom: 150px;
 }
 
 .App-logo {
