@@ -5,7 +5,8 @@
     },
     "extends": [
       "xo",
-      "prettier"
+      "prettier",
+      "plugin:react/recommended"
     ],
     "overrides": [
       
