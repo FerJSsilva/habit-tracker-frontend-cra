@@ -1,0 +1,18 @@
+{
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "files.exclude": {
+      "node_modules/": false,
+      "prettierrc.json": false,
+      ".eslintignore": false,
+      ".eslintrc.json": false,
+      ".editorconfig": false,
+      ".gitignore": false,
+      ".vscode": false
+    }
+  }
