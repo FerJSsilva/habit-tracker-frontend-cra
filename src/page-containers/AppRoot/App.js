@@ -53,7 +53,7 @@ function App() {
       <div class="nes-container with-title is-centered">
         <p class="title">Hoje - Domingo</p>
         <div class="nes-field" style={{ display: 'flex' }}>
-          <input id="time_field" class="nes-input" type="date" style={{ marginRight: '8px' }} />
+          <input id="time_field" class="nes-input" type="date" style={{ width: '70%', marginRight: '8px' }} />
           <button type="button" class="nes-btn is-primary">Add</button>
         </div>
       </div>
@@ -114,7 +114,7 @@ function App() {
         ))}
       </div>
       <br />
-      <div style={{ position: 'fixed', bottom: 0, width: '100%', backgroundColor: 'white', padding: '10px' }}>
+      <div style={{ position: 'fixed', bottom: 0, width: '92.5%', backgroundColor: 'white' }}>
         <div class="nes-container is-rounded">
           <div>
             <label>
