@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useState } from 'react';
 
 const habitsMock = [
@@ -29,21 +31,21 @@ const Home = () => {
   return (
     <div>
       <div
-        class="nes-container with-title is-centered"
+        className="nes-container with-title is-centered"
         style={{ textAlign: 'left' }}
       >
-        <p class="title">Fer - Lvl 2</p>
+        <p className="title">Fer - Lvl 2</p>
         <div>
-          <span class="nes-text">Health - </span>
-          <i class="nes-icon is-small heart"></i>
-          <i class="nes-icon is-small heart is-half"></i>
-          <i class="nes-icon is-small heart is-transparent"></i>
-          <i class="nes-icon is-small heart is-empty"></i>
-          <i class="nes-icon is-small heart is-empty"></i>
+          <span className="nes-text">Health - </span>
+          <i className="nes-icon is-small heart"></i>
+          <i className="nes-icon is-small heart is-half"></i>
+          <i className="nes-icon is-small heart is-transparent"></i>
+          <i className="nes-icon is-small heart is-empty"></i>
+          <i className="nes-icon is-small heart is-empty"></i>
         </div>
         <div>
-          <span class="nes-text">Win Streak - 2x </span>
-          <i class="nes-icon trophy is-small"></i>
+          <span className="nes-text">Win Streak - 2x </span>
+          <i className="nes-icon trophy is-small"></i>
           <br />
           <br />
 
@@ -56,35 +58,35 @@ const Home = () => {
       </div>
       <br />
 
-      <div class="nes-container with-title is-centered">
-        <p class="title">Hoje - Domingo</p>
+      <div className="nes-container with-title is-centered">
+        <p className="title">Hoje - Domingo</p>
         <div
-          class="nes-field"
+          className="nes-field"
           style={{ display: 'flex' }}
         >
           <input
             id="time_field"
-            class="nes-input"
+            className="nes-input"
             type="date"
             style={{ width: '', marginRight: '8px' }}
           />
           <button
             type="button"
-            class="nes-btn is-primary"
+            className="nes-btn is-primary"
           >
             Add
           </button>
         </div>
       </div>
       <br />
-      <div class="nes-container with-title is-centered">
-        <p class="title">Hábitos</p>
+      <div className="nes-container with-title is-centered">
+        <p className="title">Hábitos</p>
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
-                class="nes-checkbox"
+                className="nes-checkbox"
                 checked
               />
               <span className={habitStatusToClass(habit.status)}>
@@ -95,14 +97,14 @@ const Home = () => {
         ))}
       </div>
       <br />
-      <div class="nes-container with-title is-centered">
-        <p class="title">Manhã</p>
+      <div className="nes-container with-title is-centered">
+        <p className="title">Manhã</p>
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
-                class="nes-checkbox"
+                className="nes-checkbox"
                 checked
               />
               <span className={habitStatusToClass(habit.status)}>
@@ -113,14 +115,14 @@ const Home = () => {
         ))}
       </div>
       <br />
-      <div class="nes-container with-title is-centered">
-        <p class="title">Tarde</p>
+      <div className="nes-container with-title is-centered">
+        <p className="title">Tarde</p>
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
-                class="nes-checkbox"
+                className="nes-checkbox"
                 checked
               />
               <span className={habitStatusToClass(habit.status)}>
@@ -131,14 +133,14 @@ const Home = () => {
         ))}
       </div>
       <br />
-      <div class="nes-container with-title is-centered">
-        <p class="title">Noite</p>
+      <div className="nes-container with-title is-centered">
+        <p className="title">Noite</p>
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
-                class="nes-checkbox"
+                className="nes-checkbox"
                 checked
               />
               <span className={habitStatusToClass(habit.status)}>

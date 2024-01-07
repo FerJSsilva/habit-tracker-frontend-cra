@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Home = () => (
   <div>
     <h1>Welcome to the History Page!</h1>
