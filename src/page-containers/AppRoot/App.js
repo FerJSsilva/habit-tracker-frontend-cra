@@ -1,9 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Route, Link } from 'wouter';
+
+/* ----------------------------- Page Components ---------------------------- */
 import Home from '../Home/Home';
 import History from '../History/History';
 import Settings from '../Settings/Settings';
+
+/* ----------------------------- NES Components ----------------------------- */
+import Container from '../../components/composite-components/Nes/Container/Container';
+
+/* ------------------------------- CSS Imports ------------------------------ */
 import './App.css';
 
 function App() {
@@ -36,7 +42,7 @@ function App() {
           maxWidth: '475px',
         }}
       >
-        <div className="nes-container is-rounded">
+        <Container rounded>
           <div>
             <label>
               <input
@@ -84,7 +90,7 @@ function App() {
               </Link>
             </label>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );
