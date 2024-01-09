@@ -6,7 +6,7 @@ import RadioButton from '../../../components/block-components/NES/RadioButton/Ra
 import Container from '../../../components/composite-components/NES/Container/Container';
 
 function Navboard() {
-  const [answer, setAnswer] = useState('Yes');
+  const [answer, setAnswer] = useState('Habits');
 
   const handleChange = (event) => {
     console.log(event.target.value);
