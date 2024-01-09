@@ -26,19 +26,19 @@ const RadioButton = ({ label, checked, group, dark, onChange, children }) => {
         type="radio"
         className={classes}
         name={group}
+        value={label}
         checked={checked}
         onChange={onChange}
       />
-      <span></span>
-      {children || label}
+      <span>{children || label}</span>
     </label>
   );
 };
 
 RadioButton.propTypes = {
-  label: PropTypes.string,
-  checked: PropTypes.bool,
+  label: PropTypes.string.isRequired,
   group: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
   dark: PropTypes.bool,
   onChange: PropTypes.func,
   children: PropTypes.node,
@@ -46,8 +46,8 @@ RadioButton.propTypes = {
 
 RadioButton.defaultProps = {
   label: '',
-  checked: false,
   group: '',
+  checked: false,
   dark: false,
   onChange() {},
   children: null,
