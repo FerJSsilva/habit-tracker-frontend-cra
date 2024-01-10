@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from '../../components/composite-components/NES/Container/Container';
 
 import { useState } from 'react';
 
 const habitsMock = [
   { id: 1, name: 'Reading', status: 'completed' },
-  { id: 2, name: 'Writing', status: 'expiring' },
+  { id: 2, name: 'Writing', status: 'completed' },
   { id: 3, name: 'Jogging', status: 'failed' },
   { id: 4, name: 'Coding', status: 'standard' },
   { id: 5, name: 'Meditating', status: 'completed' },
@@ -16,8 +17,6 @@ function habitStatusToClass(status) {
       return 'nes-text is-primary';
     case 'completed':
       return 'nes-text is-success';
-    case 'expiring':
-      return 'nes-text is-warning';
     case 'failed':
       return 'nes-text is-error';
     default:
@@ -30,11 +29,10 @@ const Home = () => {
 
   return (
     <div>
-      <div
-        className="nes-container with-title is-centered"
-        style={{ textAlign: 'left' }}
+      <Container
+        title={'Fer - Lvl 2'}
+        centered
       >
-        <p className="title">Fer - Lvl 2</p>
         <div>
           <span className="nes-text">Health - </span>
           <i className="nes-icon is-small heart"></i>
@@ -55,11 +53,14 @@ const Home = () => {
             max="100"
           ></progress>
         </div>
-      </div>
+      </Container>
+
       <br />
 
-      <div className="nes-container with-title is-centered">
-        <p className="title">Hoje - Domingo</p>
+      <Container
+        title={'Hoje - Domingo'}
+        centered
+      >
         <div
           className="nes-field"
           style={{ display: 'flex' }}
@@ -77,17 +78,19 @@ const Home = () => {
             Add
           </button>
         </div>
-      </div>
+      </Container>
       <br />
-      <div className="nes-container with-title is-centered">
-        <p className="title">Hábitos</p>
+      <Container
+        title={'Hábitos'}
+        centered
+      >
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
                 className="nes-checkbox"
-                checked
+                defaultChecked
               />
               <span className={habitStatusToClass(habit.status)}>
                 <del>{habit.name}</del>
@@ -95,17 +98,19 @@ const Home = () => {
             </label>
           </div>
         ))}
-      </div>
+      </Container>
       <br />
-      <div className="nes-container with-title is-centered">
-        <p className="title">Manhã</p>
+      <Container
+        title={'Manhã'}
+        centered
+      >
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
                 className="nes-checkbox"
-                checked
+                defaultChecked
               />
               <span className={habitStatusToClass(habit.status)}>
                 <del>{habit.name}</del>
@@ -113,17 +118,19 @@ const Home = () => {
             </label>
           </div>
         ))}
-      </div>
+      </Container>
       <br />
-      <div className="nes-container with-title is-centered">
-        <p className="title">Tarde</p>
+      <Container
+        title={'Tarde'}
+        centered
+      >
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
                 className="nes-checkbox"
-                checked
+                defaultChecked
               />
               <span className={habitStatusToClass(habit.status)}>
                 <del>{habit.name}</del>
@@ -131,17 +138,19 @@ const Home = () => {
             </label>
           </div>
         ))}
-      </div>
+      </Container>
       <br />
-      <div className="nes-container with-title is-centered">
-        <p className="title">Noite</p>
+      <Container
+        title={'Noite'}
+        centered
+      >
         {habits.map((habit, index) => (
           <div key={index}>
             <label>
               <input
                 type="checkbox"
                 className="nes-checkbox"
-                checked
+                defaultChecked
               />
               <span className={habitStatusToClass(habit.status)}>
                 <del>{habit.name}</del>
@@ -149,7 +158,7 @@ const Home = () => {
             </label>
           </div>
         ))}
-      </div>
+      </Container>
       <br />
     </div>
   );
