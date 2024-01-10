@@ -49,7 +49,7 @@ function Navboard({ checked }) {
             )}
           </RadioButton>
         </div>
-
+        {/* 
         <div>
           <RadioButton
             group="answer"
@@ -64,7 +64,7 @@ function Navboard({ checked }) {
               </Link>
             )}
           </RadioButton>
-        </div>
+        </div> */}
       </Container>
     </div>
   );
