@@ -96,7 +96,7 @@ const NewHabit = () => (
     <br />
 
     <Container
-      title={'Periods of Day'}
+      title={'Quantidade por período'}
       centered
     >
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
@@ -105,7 +105,7 @@ const NewHabit = () => (
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '10px' }}>Any Hour </span>
+          <span style={{ marginRight: '10px' }}>Livre </span>
         </div>
         <span> x {5}</span>
       </div>
@@ -116,7 +116,7 @@ const NewHabit = () => (
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '10px' }}>Morning </span>
+          <span style={{ marginRight: '10px' }}>Manhã </span>
         </div>
         <span> x {5}</span>
       </div>
@@ -127,7 +127,7 @@ const NewHabit = () => (
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '10px' }}>Afternoon </span>
+          <span style={{ marginRight: '10px' }}>Tarde </span>
         </div>
         <span> x {5}</span>
       </div>
@@ -138,7 +138,7 @@ const NewHabit = () => (
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '10px' }}>Evening </span>
+          <span style={{ marginRight: '10px' }}>Noite </span>
         </div>
         <span> x {5}</span>
       </div>

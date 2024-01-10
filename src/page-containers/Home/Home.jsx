@@ -37,15 +37,21 @@ function Home() {
             value={currentDate}
             style={{ width: '', marginRight: '8px' }}
           />
-          <Link to="/categories">
-            <button
-              type="button"
-              className="nes-btn is-primary"
-            >
-              Novo
-            </button>
-          </Link>
         </div>
+      </Container>
+      <br />
+      <Container
+        centered
+        rounded
+      >
+        <Link to="/categories">
+          <button
+            type="button"
+            className="nes-btn is-primary"
+          >
+            Novo Hábito
+          </button>
+        </Link>
       </Container>
       <br />
       <HabitsGroup
