@@ -57,3 +57,16 @@ html, body, pre, code, kbd, samp {
     transform: rotate(360deg);
   }
 }
+
+.nes-table td, .nes-table th {
+  padding: 6px;  /* Adjust as needed */
+}
+
+.nes-table {
+  font-size: 0.8em;  /* Adjust as needed */
+}
+
+.nes-table th {
+  max-width: 120px;  /* Adjust as needed */
+  min-width: 120px;  /* Adjust as needed */
+}

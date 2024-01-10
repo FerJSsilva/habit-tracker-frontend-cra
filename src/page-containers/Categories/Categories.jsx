@@ -10,7 +10,7 @@ import { FaUsers } from 'react-icons/fa';
 function Home() {
   return (
     <Container
-      title={'Categories'}
+      title={'Categorias'}
       centered
     >
       <div>
@@ -20,10 +20,24 @@ function Home() {
             style={{ width: '100%' }}
           >
             <h2>
-              <MdSportsSoccer size={48} /> Physical
+              <MdSportsSoccer size={48} /> Físico
+            </h2>
+            <p>Cuide do seu corpo para manter a saúde agora e no futuro.</p>
+          </label>
+        </Link>
+      </div>
+      <br />
+      <div>
+        <Link href="/habits">
+          <label
+            className="nes-btn"
+            style={{ width: '100%' }}
+          >
+            <h2>
+              <TbBulb size={48} /> Intelectual
             </h2>
             <p>
-              Take care of your body to maintain health now and in the future.
+              Desenvolva seu cérebro valorizando desafios mentais e curiosidade.
             </p>
           </label>
         </Link>
@@ -36,27 +50,11 @@ function Home() {
             style={{ width: '100%' }}
           >
             <h2>
-              <TbBulb size={48} /> Intellectual
+              <BsFillSuitHeartFill size={48} /> Emocional
             </h2>
             <p>
-              Develop your brain by valuing mental challenges and curiosity.
-            </p>
-          </label>
-        </Link>
-      </div>
-      <br />
-      <div>
-        <Link href="/habits">
-          <label
-            className="nes-btn"
-            style={{ width: '100%' }}
-          >
-            <h2>
-              <BsFillSuitHeartFill size={48} /> Emotional
-            </h2>
-            <p>
-              Recognize and respect your feelings, seeking balance. Cultivate
-              empathy and self-awareness.
+              Reconheça e respeite seus sentimentos. Cultive empatia e
+              autoconhecimento.
             </p>
           </label>
         </Link>
@@ -72,8 +70,8 @@ function Home() {
               <FaUsers size={48} /> Social
             </h2>
             <p>
-              Foster healthy relationships and a strong connection with your
-              community.
+              Busque relacionamentos saudáveis e uma forte conexão com sua
+              comunidade.
             </p>
           </label>
         </Link>
@@ -86,11 +84,11 @@ function Home() {
             style={{ width: '100%' }}
           >
             <h2>
-              <BsYinYang size={48} /> Spiritual
+              <BsYinYang size={48} /> Espiritual
             </h2>
             <p>
-              Find a sense of purpose and meaning in existence. Seek inner
-              peace, ethical and moral values.
+              Encontre um sentido de propósito e significado na existência.
+              Valores éticos e morais.
             </p>
           </label>
         </Link>

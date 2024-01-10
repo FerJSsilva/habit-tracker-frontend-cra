@@ -1,25 +1,29 @@
 import React from 'react';
 import { Link } from 'wouter';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pt-br';
 import Container from '../../components/block-components/NES/Container/Container';
-// Import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
 import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
 
+dayjs.locale('pt-br');
+
 const habitsMock = [
-  { id: 1, name: 'Reading', status: 'completed' },
-  { id: 2, name: 'Writing', status: 'completed' },
-  { id: 3, name: 'Jogging', status: 'failed' },
-  { id: 4, name: 'Coding', status: 'standard' },
-  { id: 5, name: 'Meditating', status: 'completed' },
+  { id: 1, name: 'Ler', status: 'standard' },
+  { id: 2, name: 'Escrever', status: 'standard' },
+  { id: 3, name: 'Caminhar', status: 'failed' },
+  { id: 4, name: 'Programar', status: 'completed' },
+  { id: 5, name: 'Meditar', status: 'completed' },
 ];
 
 function Home() {
+  const currentDate = dayjs().format('YYYY-MM-DD');
+
   return (
     <div>
-      {/* <Dashboard /> */}
       <br />
 
       <Container
-        title={'Hoje - Domingo'}
+        title={'Hoje - Quarta'}
         centered
       >
         <div
@@ -30,6 +34,7 @@ function Home() {
             id="time_field"
             className="nes-input"
             type="date"
+            value={currentDate}
             style={{ width: '', marginRight: '8px' }}
           />
           <Link to="/categories">
@@ -37,7 +42,7 @@ function Home() {
               type="button"
               className="nes-btn is-primary"
             >
-              Add
+              Novo
             </button>
           </Link>
         </div>

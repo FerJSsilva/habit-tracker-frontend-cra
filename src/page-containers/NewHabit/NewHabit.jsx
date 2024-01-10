@@ -5,10 +5,10 @@ import { Link } from 'wouter';
 const NewHabit = () => (
   <Container>
     <Container
-      title={'New Habit'}
+      title={'Novo Hábito'}
       centered
     >
-      <span className="nes-text is-primary">Drinking Water</span>
+      <span className="nes-text is-primary">Beber água</span>
     </Container>
     <br />
     <Container
@@ -23,62 +23,7 @@ const NewHabit = () => (
             value="Monday"
             defaultChecked
           />
-          <span>Monday</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            className="nes-checkbox"
-            value="Tuesday"
-            defaultChecked
-          />
-          <span>Tuesday</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            className="nes-checkbox"
-            value="Wednesday"
-            defaultChecked
-          />
-          <span>Wednesday</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            className="nes-checkbox"
-            value="Thursday"
-            defaultChecked
-          />
-          <span>Thursday</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            className="nes-checkbox"
-            value="Friday"
-            defaultChecked
-          />
-          <span>Friday</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            className="nes-checkbox"
-            value="Saturday"
-            defaultChecked
-          />
-          <span>Saturday</span>
+          <span>Domingo</span>
         </label>
       </div>
       <div>
@@ -89,7 +34,62 @@ const NewHabit = () => (
             value="Monday"
             defaultChecked
           />
-          <span>Monday</span>
+          <span>Segunda</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            className="nes-checkbox"
+            value="Tuesday"
+            defaultChecked
+          />
+          <span>Terça</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            className="nes-checkbox"
+            value="Wednesday"
+            defaultChecked
+          />
+          <span>Quarta</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            className="nes-checkbox"
+            value="Thursday"
+            defaultChecked
+          />
+          <span>Quinta</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            className="nes-checkbox"
+            value="Friday"
+            defaultChecked
+          />
+          <span>Sexta</span>
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            className="nes-checkbox"
+            value="Saturday"
+            defaultChecked
+          />
+          <span>Sábado</span>
         </label>
       </div>
     </Container>
@@ -100,45 +100,45 @@ const NewHabit = () => (
       centered
     >
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <div style={{ marginRight: '15px' }}>
+        <div style={{ marginRight: '10px' }}>
           <button>+</button>
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '15px' }}>Any Hour </span>
+          <span style={{ marginRight: '10px' }}>Any Hour </span>
         </div>
         <span> x {5}</span>
       </div>
       <hr />
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <div style={{ marginRight: '15px' }}>
+        <div style={{ marginRight: '10px' }}>
           <button>+</button>
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '15px' }}>Morning </span>
+          <span style={{ marginRight: '10px' }}>Morning </span>
         </div>
         <span> x {5}</span>
       </div>
       <hr />
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <div style={{ marginRight: '15px' }}>
+        <div style={{ marginRight: '10px' }}>
           <button>+</button>
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '15px' }}>Afternoon </span>
+          <span style={{ marginRight: '10px' }}>Afternoon </span>
         </div>
         <span> x {5}</span>
       </div>
       <hr />
       <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <div style={{ marginRight: '15px' }}>
+        <div style={{ marginRight: '10px' }}>
           <button>+</button>
           <button>-</button>
         </div>
         <div>
-          <span style={{ marginRight: '15px' }}>Evening </span>
+          <span style={{ marginRight: '10px' }}>Evening </span>
         </div>
         <span> x {5}</span>
       </div>
@@ -152,7 +152,7 @@ const NewHabit = () => (
         className="nes-btn is-success"
         style={{ width: '100%' }}
       >
-        Save
+        Salvar
       </button>
     </Link>
   </Container>

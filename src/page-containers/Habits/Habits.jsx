@@ -7,7 +7,7 @@ import { FaGlassWaterDroplet } from 'react-icons/fa6';
 
 const Habits = () => (
   <Container
-    title={'Habits - Physical'}
+    title={'Hábitos - Físico'}
     centered
   >
     <div>
@@ -18,7 +18,7 @@ const Habits = () => (
         >
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <BsPersonWalking size={48} />
-            <h3>Walking 15m</h3>
+            <h3>Andar 15m</h3>
             <IoIosAddCircleOutline size={48} />
           </div>
         </label>
@@ -33,7 +33,7 @@ const Habits = () => (
         >
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <FaGlassWaterDroplet size={48} />
-            <h3>Drinking Water</h3>
+            <h3>Beber Água</h3>
             <IoIosAddCircleOutline size={48} />
           </div>
         </label>

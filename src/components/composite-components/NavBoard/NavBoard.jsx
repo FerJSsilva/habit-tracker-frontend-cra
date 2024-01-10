@@ -25,10 +25,10 @@ function Navboard({ checked }) {
             checked={checked === 'habits'}
           >
             {checked === 'habits' ? (
-              <span>Habits</span>
+              <span>Hábitos</span>
             ) : (
               <Link href="/">
-                <a className="link">Habits</a>
+                <a className="link">Hábitos</a>
               </Link>
             )}
           </RadioButton>
@@ -41,10 +41,10 @@ function Navboard({ checked }) {
             checked={checked === 'history'}
           >
             {checked === 'history' ? (
-              <span>History</span>
+              <span>Histórico</span>
             ) : (
               <Link href="/history">
-                <a className="link">History</a>
+                <a className="link">Histórico</a>
               </Link>
             )}
           </RadioButton>
