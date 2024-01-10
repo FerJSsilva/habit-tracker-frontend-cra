@@ -5,7 +5,10 @@ import { BsPersonWalking } from 'react-icons/bs';
 import { FaGlassWaterDroplet } from 'react-icons/fa6';
 
 const Home = () => (
-  <Container>
+  <Container
+    title={'Habits - Physical'}
+    centered
+  >
     <div>
       <label
         className="nes-btn"
