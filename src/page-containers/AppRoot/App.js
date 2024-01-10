@@ -3,6 +3,7 @@ import { Route } from 'wouter';
 
 /* ----------------------------- Page Components ---------------------------- */
 import Home from '../Home/Home';
+import Categories from '../Categories/Categories';
 import History from '../History/History';
 import Settings from '../Settings/Settings';
 
@@ -18,6 +19,10 @@ function App() {
       <Route
         path="/"
         component={Home}
+      />
+      <Route
+        path="/categories"
+        component={Categories}
       />
       <Route
         path="/history"
