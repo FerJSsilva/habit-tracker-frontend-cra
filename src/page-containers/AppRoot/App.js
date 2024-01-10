@@ -7,7 +7,7 @@ import History from '../History/History';
 import Settings from '../Settings/Settings';
 
 /* ---------------------------- Domain Components --------------------------- */
-import NavBoard from '../../components/domain-components/NavBoard/NavBoard';
+import NavBoard from '../../components/composite-components/NavBoard/NavBoard';
 
 /* ------------------------------- CSS Imports ------------------------------ */
 import './App.css';

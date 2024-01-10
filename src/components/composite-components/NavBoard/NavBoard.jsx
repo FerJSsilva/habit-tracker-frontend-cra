@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'wouter';
 
 /* ----------------------------- NES Components ----------------------------- */
-import RadioButton from '../../../components/block-components/NES/RadioButton/RadioButton';
-import Container from '../../../components/composite-components/NES/Container/Container';
+import RadioButton from '../../block-components/NES/RadioButton/RadioButton';
+import Container from '../NES/Container/Container';
 
 function Navboard() {
   const [answer, setAnswer] = useState('Habits');
