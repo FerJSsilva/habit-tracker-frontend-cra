@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import Container from '../../components/block-components/NES/Container/Container';
-import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
+// Import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
 import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
 
 const habitsMock = [
@@ -15,7 +15,7 @@ const habitsMock = [
 function Home() {
   return (
     <div>
-      <Dashboard />
+      {/* <Dashboard /> */}
       <br />
 
       <Container
