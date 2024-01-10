@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../../components/block-components/NES/Container/Container';
 import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
+import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
 
 import { useState } from 'react';
 
@@ -56,85 +57,25 @@ const Home = () => {
         </div>
       </Container>
       <br />
-      <Container
+      <HabitsGroup
         title={'Hábitos'}
-        centered
-      >
-        {habits.map((habit, index) => (
-          <div key={index}>
-            <label>
-              <input
-                type="checkbox"
-                className="nes-checkbox"
-                defaultChecked
-              />
-              <span className={habitStatusToClass(habit.status)}>
-                <del>{habit.name}</del>
-              </span>
-            </label>
-          </div>
-        ))}
-      </Container>
+        habits={habits}
+      />
       <br />
-      <Container
+      <HabitsGroup
         title={'Manhã'}
-        centered
-      >
-        {habits.map((habit, index) => (
-          <div key={index}>
-            <label>
-              <input
-                type="checkbox"
-                className="nes-checkbox"
-                defaultChecked
-              />
-              <span className={habitStatusToClass(habit.status)}>
-                <del>{habit.name}</del>
-              </span>
-            </label>
-          </div>
-        ))}
-      </Container>
+        habits={habits}
+      />
       <br />
-      <Container
+      <HabitsGroup
         title={'Tarde'}
-        centered
-      >
-        {habits.map((habit, index) => (
-          <div key={index}>
-            <label>
-              <input
-                type="checkbox"
-                className="nes-checkbox"
-                defaultChecked
-              />
-              <span className={habitStatusToClass(habit.status)}>
-                <del>{habit.name}</del>
-              </span>
-            </label>
-          </div>
-        ))}
-      </Container>
+        habits={habits}
+      />
       <br />
-      <Container
+      <HabitsGroup
         title={'Noite'}
-        centered
-      >
-        {habits.map((habit, index) => (
-          <div key={index}>
-            <label>
-              <input
-                type="checkbox"
-                className="nes-checkbox"
-                defaultChecked
-              />
-              <span className={habitStatusToClass(habit.status)}>
-                <del>{habit.name}</del>
-              </span>
-            </label>
-          </div>
-        ))}
-      </Container>
+        habits={habits}
+      />
       <br />
     </div>
   );
