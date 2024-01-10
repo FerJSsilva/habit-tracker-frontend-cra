@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 /**
  * Container component
- * It is considered a composite component because it is composed of other components
- * and it has a purpose of its own.
+ * It is considered a block component because it's generic
+ * and does not have a defined purpose
  * @param {boolean} centered - Center the container
  * @param {boolean} dark - Darken the container
  * @param {boolean} rounded - Round the container
