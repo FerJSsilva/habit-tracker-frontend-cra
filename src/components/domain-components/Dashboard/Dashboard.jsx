@@ -3,7 +3,7 @@ import Container from '../../../components/block-components/NES/Container/Contai
 
 const Dashboard = () => (
   <Container
-    title={'Fer - Lvl 2'}
+    title={'User - Lvl XX'}
     centered
   >
     <div>
