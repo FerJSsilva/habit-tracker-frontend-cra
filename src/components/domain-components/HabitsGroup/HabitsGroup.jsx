@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Container from '../../../components/block-components/NES/Container/Container';
 
-const HabitGroup = (habits, title) => (
+const HabitGroup = ({ habits, title }) => (
   <Container
     title={title}
     centered
@@ -32,5 +33,20 @@ const HabitGroup = (habits, title) => (
     })}
   </Container>
 );
+
+HabitGroup.propTypes = {
+  habits: PropTypes.arrayOf(
+    PropTypes.shape({
+      status: PropTypes.string,
+      name: PropTypes.string,
+    })
+  ),
+  title: PropTypes.string,
+};
+
+HabitGroup.defaultProps = {
+  habits: [],
+  title: '',
+};
 
 export default HabitGroup;
