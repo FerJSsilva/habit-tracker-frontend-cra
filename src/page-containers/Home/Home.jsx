@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'wouter';
 import Container from '../../components/block-components/NES/Container/Container';
 import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
 import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
@@ -35,33 +36,35 @@ const Home = () => {
             type="date"
             style={{ width: '', marginRight: '8px' }}
           />
-          <button
-            type="button"
-            className="nes-btn is-primary"
-          >
-            Add
-          </button>
+          <Link to="/categories">
+            <button
+              type="button"
+              className="nes-btn is-primary"
+            >
+              Add
+            </button>
+          </Link>
         </div>
       </Container>
       <br />
       <HabitsGroup
         title={'Hábitos'}
-        habits={habits}
+        habits={habitsMock}
       />
       <br />
       <HabitsGroup
         title={'Manhã'}
-        habits={habits}
+        habits={habitsMock}
       />
       <br />
       <HabitsGroup
         title={'Tarde'}
-        habits={habits}
+        habits={habitsMock}
       />
       <br />
       <HabitsGroup
         title={'Noite'}
-        habits={habits}
+        habits={habitsMock}
       />
       <br />
     </div>
