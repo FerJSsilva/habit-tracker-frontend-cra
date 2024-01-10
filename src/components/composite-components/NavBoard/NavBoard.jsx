@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'wouter';
 
 /* ----------------------------- NES Components ----------------------------- */
-import RadioButton from '../../block-components/NES/RadioButton/RadioButton';
-import Container from '../../block-components/NES/Container/Container';
+import RadioButton from '../../../components/block-components/NES/RadioButton/RadioButton';
+import Container from '../../../components/block-components/NES/Container/Container';
 
-function Navboard() {
-  const [answer, setAnswer] = useState('Habits');
-
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setAnswer(event.target.value);
-  };
-
+function Navboard({ checked }) {
   return (
     <div
       style={{
@@ -28,12 +22,15 @@ function Navboard() {
           <RadioButton
             group="answer"
             label="Habits"
-            checked={answer === 'Habits'}
-            onChange={handleChange}
+            checked={checked === 'habits'}
           >
-            <Link href="/">
-              <a className="link">Habits</a>
-            </Link>
+            {checked === 'habits' ? (
+              <span>Habits</span>
+            ) : (
+              <Link href="/">
+                <a className="link">Habits</a>
+              </Link>
+            )}
           </RadioButton>
         </div>
 
@@ -41,12 +38,15 @@ function Navboard() {
           <RadioButton
             group="answer"
             label="History"
-            checked={answer === 'History'}
-            onChange={handleChange}
+            checked={checked === 'history'}
           >
-            <Link href="/history">
-              <a className="link">History</a>
-            </Link>
+            {checked === 'history' ? (
+              <span>History</span>
+            ) : (
+              <Link href="/history">
+                <a className="link">History</a>
+              </Link>
+            )}
           </RadioButton>
         </div>
 
@@ -54,17 +54,28 @@ function Navboard() {
           <RadioButton
             group="answer"
             label="Settings"
-            checked={answer === 'Settings'}
-            onChange={handleChange}
+            checked={checked === 'settings'}
           >
-            <Link href="/settings">
-              <a className="link">Settings</a>
-            </Link>
+            {checked === 'settings' ? (
+              <span>Settings</span>
+            ) : (
+              <Link href="/settings">
+                <a className="link">Settings</a>
+              </Link>
+            )}
           </RadioButton>
         </div>
       </Container>
     </div>
   );
 }
+
+Navboard.propTypes = {
+  checked: PropTypes.string.isRequired,
+};
+
+Navboard.defaultProps = {
+  checked: '',
+};
 
 export default Navboard;
