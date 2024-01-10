@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 
 /* ----------------------------- NES Components ----------------------------- */
 import RadioButton from '../../block-components/NES/RadioButton/RadioButton';
-import Container from '../NES/Container/Container';
+import Container from '../../block-components/NES/Container/Container';
 
 function Navboard() {
   const [answer, setAnswer] = useState('Habits');
