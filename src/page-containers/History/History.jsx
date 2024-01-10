@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import Container from '../../components/block-components/NES/Container/Container';
 
-function getWeekOfMonth(date) {
+function getWeekOfMonth() {
   const hoje = dayjs(); // Pega a data de hoje
   const primeiroDiaDoMes = hoje.startOf('month'); // Pega o primeiro dia do mês
   const diferencaEmDias = hoje.diff(primeiroDiaDoMes, 'day'); // Calcula a diferença em dias
