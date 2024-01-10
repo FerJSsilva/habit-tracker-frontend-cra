@@ -4,8 +4,6 @@ import Container from '../../components/block-components/NES/Container/Container
 import Dashboard from '../../components/domain-components/Dashboard/Dashboard';
 import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
 
-import { useState } from 'react';
-
 const habitsMock = [
   { id: 1, name: 'Reading', status: 'completed' },
   { id: 2, name: 'Writing', status: 'completed' },
@@ -14,9 +12,7 @@ const habitsMock = [
   { id: 5, name: 'Meditating', status: 'completed' },
 ];
 
-const Home = () => {
-  const [habits] = useState(habitsMock);
-
+function Home() {
   return (
     <div>
       <Dashboard />
@@ -69,6 +65,6 @@ const Home = () => {
       <br />
     </div>
   );
-};
+}
 
 export default Home;
