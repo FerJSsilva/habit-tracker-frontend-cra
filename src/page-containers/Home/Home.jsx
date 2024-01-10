@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../../components/composite-components/NES/Container/Container';
+import Container from '../../components/block-components/NES/Container/Container';
 
 import { useState } from 'react';
 
