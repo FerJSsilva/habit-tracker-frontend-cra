@@ -1,6 +1,7 @@
 import React from 'react';
-import Container from '../../components/block-components/NES/Container/Container';
-const Home = () => (
+import Container from '../../../components/block-components/NES/Container/Container';
+
+const Dashboard = () => (
   <Container
     title={'Fer - Lvl 2'}
     centered
@@ -29,4 +30,4 @@ const Home = () => (
   </Container>
 );
 
-export default Home;
+export default Dashboard;
