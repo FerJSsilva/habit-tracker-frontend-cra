@@ -13,19 +13,6 @@ const habitsMock = [
   { id: 5, name: 'Meditating', status: 'completed' },
 ];
 
-function habitStatusToClass(status) {
-  switch (status) {
-    case 'standard':
-      return 'nes-text is-primary';
-    case 'completed':
-      return 'nes-text is-success';
-    case 'failed':
-      return 'nes-text is-error';
-    default:
-      return 'nes-text is-disabled';
-  }
-}
-
 const Home = () => {
   const [habits] = useState(habitsMock);
 
