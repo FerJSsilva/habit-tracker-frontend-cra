@@ -7,9 +7,6 @@ import Categories from '../Categories/Categories';
 import History from '../History/History';
 import Settings from '../Settings/Settings';
 
-/* ---------------------------- Domain Components --------------------------- */
-import NavBoard from '../../components/composite-components/NavBoard/NavBoard';
-
 /* ------------------------------- CSS Imports ------------------------------ */
 import './App.css';
 
@@ -32,7 +29,6 @@ function App() {
         path="/settings"
         component={Settings}
       />
-      <NavBoard />
     </div>
   );
 }
