@@ -7,6 +7,7 @@ import Categories from '../Categories/Categories';
 import Habits from '../Habits/Habits';
 import History from '../History/History';
 import Settings from '../Settings/Settings';
+import NewHabit from '../NewHabit/NewHabit';
 
 import NavBoard from '../../components/composite-components/NavBoard/NavBoard';
 
@@ -47,6 +48,10 @@ function App() {
       <Route
         path="/habits"
         component={Habits}
+      />
+      <Route
+        path="/new"
+        component={NewHabit}
       />
     </div>
   );
