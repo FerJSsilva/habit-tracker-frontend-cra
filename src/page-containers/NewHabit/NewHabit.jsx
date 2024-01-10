@@ -1,9 +1,6 @@
 import React from 'react';
 import Container from '../../components/block-components/NES/Container/Container';
 import { Link } from 'wouter';
-import { IoIosAddCircleOutline } from 'react-icons/io';
-import { BsPersonWalking } from 'react-icons/bs';
-import { FaGlassWaterDroplet } from 'react-icons/fa6';
 
 const NewHabit = () => (
   <Container>
@@ -149,13 +146,15 @@ const NewHabit = () => (
     </Container>
 
     <br />
-    <button
-      type="button"
-      className="nes-btn is-success"
-      style={{ width: '100%' }}
-    >
-      Save
-    </button>
+    <Link href="/">
+      <button
+        type="button"
+        className="nes-btn is-success"
+        style={{ width: '100%' }}
+      >
+        Save
+      </button>
+    </Link>
   </Container>
 );
 
