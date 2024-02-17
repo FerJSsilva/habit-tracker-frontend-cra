@@ -19,7 +19,7 @@ export const habitsAPI = createApi({
   }),
   endpoints: (builder) => ({
     fetchHabits: builder.query({
-      query: () => `habits`,
+      query: (category) => `habits?category=${category}`,
       transformResponse(response) {
         // Normalizing response data
         return habitsAdapter.setAll(initialState, response);
