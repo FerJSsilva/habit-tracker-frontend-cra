@@ -1,54 +1,53 @@
 import React from 'react';
 import Container from '../../components/block-components/NES/Container/Container';
-import { Link } from 'wouter';
+import { Link, useParams } from 'wouter';
 import { useFetchHabitsQuery } from '../../redux/services/habitsService';
 
 /* ---------------------------------- Icons --------------------------------- */
 import { IoIosAddCircleOutline } from 'react-icons/io';
-import { BsPersonWalking } from 'react-icons/bs';
-import { FaGlassWaterDroplet } from 'react-icons/fa6';
+// Import { BsPersonWalking } from 'react-icons/bs';
 
 function Habits() {
-  const { data, error, isLoading } = useFetchHabitsQuery();
+  const params = useParams();
+
+  const { data, error, isLoading } = useFetchHabitsQuery(params.category);
 
   console.log('isLoading:', isLoading);
-
   console.log('error:', error);
-
   console.log('data:', data);
+
+  if (!data || isLoading) {
+    return 'Loading...';
+  }
+
+  const { ids, entities } = data;
+
   return (
     <Container
-      title={'Hábitos - Físico'}
+      title={'Hábitos'}
       centered
     >
       <div>
-        <Link href="/new">
-          <label
-            className="nes-btn"
-            style={{ width: '100%' }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <BsPersonWalking size={48} />
-              <h3>Andar 15m</h3>
-              <IoIosAddCircleOutline size={48} />
-            </div>
-          </label>
-        </Link>
-      </div>
-      <br />
-      <div>
-        <Link href="/new">
-          <label
-            className="nes-btn"
-            style={{ width: '100%' }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <FaGlassWaterDroplet size={48} />
-              <h3>Beber Água</h3>
-              <IoIosAddCircleOutline size={48} />
-            </div>
-          </label>
-        </Link>
+        {ids.map((id) => (
+          <div key={id}>
+            <Link href={`/new/${id}`}>
+              <label
+                className="nes-btn"
+                style={{ width: '100%' }}
+              >
+                <div
+                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                >
+                  {/* <BsPersonWalking size={48} /> */}
+                  <h3>{entities[id].name}</h3>
+                  <IoIosAddCircleOutline size={48} />
+                </div>
+              </label>
+            </Link>
+            <br />
+            <br />
+          </div>
+        ))}
       </div>
     </Container>
   );

@@ -46,7 +46,7 @@ function App() {
         component={Categories}
       />
       <Route
-        path="/habits"
+        path="/habits/:category"
         component={Habits}
       />
       <Route

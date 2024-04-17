@@ -14,7 +14,7 @@ function Home() {
       centered
     >
       <div>
-        <Link href="/habits">
+        <Link href="/habits/physical">
           <label
             className="nes-btn"
             style={{ width: '100%' }}
@@ -28,7 +28,7 @@ function Home() {
       </div>
       <br />
       <div>
-        <Link href="/habits">
+        <Link href="/habits/intellectual">
           <label
             className="nes-btn"
             style={{ width: '100%' }}
@@ -44,7 +44,7 @@ function Home() {
       </div>
       <br />
       <div>
-        <Link href="/habits">
+        <Link href="/habits/emotional">
           <label
             className="nes-btn"
             style={{ width: '100%' }}
@@ -61,7 +61,7 @@ function Home() {
       </div>
       <br />
       <div>
-        <Link href="/habits">
+        <Link href="/habits/social">
           <label
             className="nes-btn"
             style={{ width: '100%' }}
@@ -78,7 +78,7 @@ function Home() {
       </div>
       <br />
       <div>
-        <Link href="/habits">
+        <Link href="/habits/spiritual">
           <label
             className="nes-btn"
             style={{ width: '100%' }}
