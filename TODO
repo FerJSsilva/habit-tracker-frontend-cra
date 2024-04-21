@@ -1,0 +1,23 @@
+
+Habit Tracker:
+  ☐ Install auth0 third party authentication
+  ☐ Install AirBnB ESLint code style
+  Frontend:
+    Visual:
+      ☐ Align Habits items
+      ☐ Fix responsive design
+      ☐ Fix the day row in the History to the left as a sticky element
+    Functionality:
+      ☐ Create Date Picker Component
+      ☐ History Navigation
+      ☐ Add a DatePicker to the History page
+      ☐ Connect the History page to the backend
+      ☐ Connect the Habits page to the backend
+      ☐ Connect the New Habit page to the backend
+  Backend:
+    ☐ Connect to MongoDB
+    ☐ Change "logs" endpoint name to "achievements"
+    ☐ user_habits need to contain the period of the habit
+    ☐ Add "categories" to the backend
+    ☐ Fix the backend to receive a bitmask for the days
+    ☐ Fix the backend to receive the period quantity of the habit
