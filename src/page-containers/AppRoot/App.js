@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'wouter';
+import { useAuth0 } from '@auth0/auth0-react';
 
 /* ----------------------------- Page Components ---------------------------- */
 import Home from '../Home/Home';
@@ -15,45 +16,55 @@ import NavBoard from '../../components/composite-components/NavBoard/NavBoard';
 import './App.css';
 
 function App() {
+  const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+
+  useEffect(() => {
+    if (!isAuthenticated && !isLoading) {
+      loginWithRedirect();
+    }
+  }, [isAuthenticated, isLoading, loginWithRedirect]);
+
   return (
-    <div className="App">
-      <Route path="/">
-        {() => (
-          <div>
-            <Home />
-            <NavBoard checked="habits" />
-          </div>
-        )}
-      </Route>
-      <Route path="/history">
-        {() => (
-          <div>
-            <History />
-            <NavBoard checked="history" />
-          </div>
-        )}
-      </Route>
-      <Route path="/settings">
-        {() => (
-          <div>
-            <Settings />
-            <NavBoard checked="settings" />
-          </div>
-        )}
-      </Route>
-      <Route
-        path="/categories"
-        component={Categories}
-      />
-      <Route
-        path="/habits/:category"
-        component={Habits}
-      />
-      <Route
-        path="/new"
-        component={NewHabit}
-      />
-    </div>
+    isAuthenticated && (
+      <div className="App">
+        <Route path="/">
+          {() => (
+            <div>
+              <Home />
+              <NavBoard checked="habits" />
+            </div>
+          )}
+        </Route>
+        <Route path="/history">
+          {() => (
+            <div>
+              <History />
+              <NavBoard checked="history" />
+            </div>
+          )}
+        </Route>
+        <Route path="/settings">
+          {() => (
+            <div>
+              <Settings />
+              <NavBoard checked="settings" />
+            </div>
+          )}
+        </Route>
+        <Route
+          path="/categories"
+          component={Categories}
+        />
+        <Route
+          path="/habits/:category"
+          component={Habits}
+        />
+        <Route
+          path="/new"
+          component={NewHabit}
+        />
+      </div>
+    )
   );
 }
 
