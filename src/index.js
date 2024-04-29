@@ -2,15 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './page-containers/AppRoot/App';
 import { Provider } from 'react-redux';
+import { Auth0Provider } from '@auth0/auth0-react';
 import { store } from './redux/store';
 import reportWebVitals from './utils/reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Auth0Provider
+      domain="ferjssilva.auth0.com"
+      clientId="9CB4dfR6vrzMWO66VkD2xGGmSNilueuk"
+      authorizationParams={{
+        // eslint-disable-next-line camelcase
+        redirect_uri: window.location.origin,
+      }}
+    >
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Auth0Provider>
   </React.StrictMode>
 );
 

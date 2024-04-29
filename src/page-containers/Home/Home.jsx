@@ -4,6 +4,9 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
 import Container from '../../components/block-components/NES/Container/Container';
 import HabitsGroup from '../../components/domain-components/HabitsGroup/HabitsGroup';
+import LoginButton from '../../components/domain-components/LoginButton/LoginButton';
+import LogoutButton from '../../components/domain-components/LogoutButton/LogoutButton';
+import UserProfile from '../../components/domain-components/UserProfile/UserProfile';
 
 dayjs.locale('pt-br');
 
@@ -22,6 +25,17 @@ function Home() {
     <div>
       <br />
 
+      <Container
+        title={'User Info'}
+        centered
+      >
+        <div style={{ display: 'flex' }}>
+          <UserProfile />
+          <LoginButton />
+          <LogoutButton />
+        </div>
+      </Container>
+      <br />
       <Container
         title={'Hoje - Quarta'}
         centered
