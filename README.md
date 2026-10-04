@@ -1,70 +1,218 @@
-# Getting Started with Create React App
+# Habit Tracker Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based habit tracking application with Auth0 authentication and full backend API integration.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- ✅ Auth0 authentication
+- ✅ Full REST API integration
+- ✅ Redux Toolkit Query for state management
+- ✅ Responsive NES-style UI
+- ✅ Category-based habit organization
+- ✅ User habit tracking with streaks
+- ✅ Multi-language support
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
+- **React** 18.2.0
+- **Redux Toolkit** with RTK Query
+- **Auth0** for authentication
+- **Axios** for HTTP requests
+- **Wouter** for routing
+- **Day.js** for date handling
+- **NES.css** for retro styling
+
+## 📦 Installation
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+yarn install
+# or
+npm install
+```
+
+3. Create a `.env` file in the root directory:
+```env
+REACT_APP_API_BASE_URL=https://habit-tracker-rest-api.onrender.com
+```
+
+For local development:
+```env
+REACT_APP_API_BASE_URL=http://localhost:4000
+```
+
+## 🎮 Running the App
+
+### Development Mode
+```bash
+yarn start
+# or
+npm start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Production Build
+```bash
+yarn build
+# or
+npm run build
+```
 
-### `npm test`
+### Run Tests
+```bash
+yarn test
+# or
+npm test
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔌 Backend API
 
-### `npm run build`
+This frontend connects to the Habit Tracker REST API:
+- **Production**: https://habit-tracker-rest-api.onrender.com
+- **API Base Path**: `/api/habit-tracker`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Available Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `GET /categories` - List all categories
+- `GET /category-translations` - List category translations
+- `GET /habits` - List all habits
+- `POST /habits` - Create a new habit
+- `PUT /habits/:id` - Update a habit
+- `DELETE /habits/:id` - Delete a habit
+- `GET /habit-translations` - List habit translations (with pagination, search, filtering)
+- `POST /habit-translations` - Create habit translation
+- `GET /users` - List users
+- `GET /user-habits` - List user's habits
+- `POST /user-habits` - Add habit to user's list
+- `PUT /user-habits/:id` - Update user habit
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All endpoints require Auth0 authentication with Bearer token.
 
-### `npm run eject`
+## 📚 API Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+See [API_INTEGRATION.md](./API_INTEGRATION.md) for detailed API integration documentation and usage examples.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Quick Example
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+import { useFetchHabitsQuery, useCreateUserHabitMutation } from './redux/services/habitsService';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function MyComponent() {
+  // Fetch habits
+  const { data, isLoading, error } = useFetchHabitsQuery();
+  
+  // Create user habit
+  const [createUserHabit] = useCreateUserHabitMutation();
+  
+  const handleAddHabit = async () => {
+    await createUserHabit({
+      habitId: "habit_id_here",
+      userId: "user_id_here",
+      selectedDays: "1,2,3,4,5",
+      anytime: 1,
+      morning: 1,
+      afternoon: 0,
+      evening: 0,
+      startDate: new Date().toISOString(),
+      endDate: new Date(Date.now() + 30*24*60*60*1000).toISOString(),
+      streak: 0
+    });
+  };
+  
+  return <div>...</div>;
+}
+```
 
-## Learn More
+## 🔐 Authentication
+
+The app uses Auth0 for authentication. All API requests automatically include the Auth0 Bearer token in the Authorization header.
+
+The `useAuth0Token` hook handles:
+- Token retrieval
+- Token storage in localStorage
+- Automatic token injection in API calls
+
+## 📁 Project Structure
+
+```
+src/
+├── components/           # Reusable UI components
+│   ├── block-components/ # Basic UI blocks (NES components)
+│   ├── composite-components/ # Combined components
+│   └── domain-components/ # Business logic components
+├── hooks/               # Custom React hooks
+│   ├── domain-hooks/    # Domain-specific hooks (habits, etc.)
+│   └── useAuth0Token.js # Auth0 token management
+├── page-containers/     # Page-level components
+│   ├── AppRoot/
+│   ├── Categories/
+│   ├── Habits/
+│   ├── History/
+│   ├── Home/
+│   ├── NewHabit/
+│   └── Settings/
+├── redux/              # Redux store and services
+│   ├── store.js
+│   └── services/
+│       └── habitsService.js # RTK Query API
+├── utils/              # Utility functions
+│   ├── client-request.js
+│   ├── constants.js
+│   └── env-vars.js
+└── examples/           # Usage examples
+    └── APIUsageExamples.jsx
+```
+
+## 🎨 Styling
+
+The app uses NES.css for a retro 8-bit gaming aesthetic. Custom styles are in component-specific CSS files and `App.css`.
+
+## 🧪 Testing
+
+```bash
+yarn test
+```
+
+Tests use:
+- @testing-library/react
+- @testing-library/jest-dom
+- @testing-library/user-event
+
+## 🚢 Deployment
+
+Build the production version:
+```bash
+yarn build
+```
+
+The optimized build will be in the `build/` folder, ready for deployment to any static hosting service (Netlify, Vercel, GitHub Pages, etc.).
+
+## 📝 Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `REACT_APP_API_BASE_URL` | Backend API base URL | `https://habit-tracker-rest-api.onrender.com` |
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+## Learn More About Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route } from 'wouter';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0Token } from '../../hooks/useAuth0Token';
 
 /* ----------------------------- Page Components ---------------------------- */
 import Home from '../Home/Home';
@@ -17,6 +18,9 @@ import './App.css';
 
 function App() {
   const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+
+  // Initialize Auth0 token for API calls
+  useAuth0Token();
 
   useEffect(() => {
     if (!isAuthenticated && !isLoading) {
